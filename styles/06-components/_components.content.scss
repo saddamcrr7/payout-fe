@@ -1,0 +1,57 @@
+.c-content {
+  width: 100%;
+
+  &__subtitle {
+    color: var(--subtitle-color);
+    font-weight: $font-weight-bold;
+    margin-bottom: rem(24px);
+  }
+
+  &__title {
+    color: var(--title-color);
+    font-size: $h1-font-size;
+    margin-bottom: 0;
+  }
+
+  &__title-text {
+    color: inherit;
+    font-size: inherit;
+
+    &--highlight {
+      color: $primary-02;
+    }
+
+    &--bold {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__text {
+    color: var(--text-color);
+    font-size: rem(18px);
+    margin-top: rem(32px);
+    margin-bottom: 0;
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(40px);
+
+    .c-btn + .c-btn {
+      margin-left: $grid-gutter-width;
+    }
+  }
+
+  &--light {
+    --subtitle-color: #{$primary-03};
+    --title-color: #{$white};
+    --text-color: #{$white};
+  }
+
+  &--dark {
+    --subtitle-color: #{$primary-02};
+    --title-color: #{$grey-dark};
+    --text-color: #{$grey};
+  }
+}

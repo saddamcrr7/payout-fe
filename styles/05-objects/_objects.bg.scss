@@ -1,0 +1,63 @@
+.o-bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--bg-color);
+  z-index: 1;
+
+  &--white {
+    --bg-color: #{$white};
+  }
+
+  &--light {
+    --bg-color: #{$primary-04};
+  }
+
+  &--primary-mix {
+    --bg-color: #{$Gradient-01};
+  }
+
+  &--light-mix {
+    --bg-color: #{$Gradient-04};
+  }
+
+  &__pattern{
+    position: absolute;
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &.is-top {
+      top: 0;
+    }
+
+    &.is-right {
+      right: 0;
+    }
+
+    &.is-bottom {
+      bottom: 0;
+    }
+
+    &.is-left {
+      left: 0;
+    }
+
+    &.is-sm {
+      display: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+
+      &.is-sm {
+        display: block;
+      }
+    }
+  }
+}

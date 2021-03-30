@@ -1,0 +1,49 @@
+.o-hero {
+  $root: &;
+
+  position: relative;
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+
+
+  &--main {
+    padding-top: rem(215px);
+    padding-bottom: rem(206px);
+
+    .c-content__title{
+      font-size: $display1-size;
+      font-weight: $font-weight-light;
+      line-height: 1.1;
+    }
+
+    .c-content__title-text--highlight {
+      color: $primary-03;
+    }
+
+    .c-content__title-text--bold {
+      font-weight: $font-weight-medium;
+    }
+
+    .c-content__text {
+      max-width: rem(381px);
+      line-height: 1.6;
+    }
+
+    #{$root} {
+      &__content {
+        max-width: rem(585px);
+      }
+
+      &__illustration {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+    }
+  }
+}

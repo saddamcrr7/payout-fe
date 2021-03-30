@@ -1,0 +1,165 @@
+.c-btn {
+
+  @include basic-transition((transform, color, border-color, background-color));
+
+  display: inline-flex;
+  align-items: center;
+  padding: rem(16px) rem(22px);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  border: none;
+  outline: none;
+  border-radius: rem(8px);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+
+  &__icon {
+    &--right {
+      margin-left: rem(18px);
+    }
+  }
+
+  // colors
+
+  &--primary-01 {
+    color: $white;
+    background: $primary-01;
+    transition: none;
+
+    &:hover {
+      @include gradientBg($Gradient-01);
+    }
+  }
+
+  &--primary-02 {
+    color: $white;
+    background: $primary-02;
+    transition: none;
+
+    &:hover {
+      background: $white;
+    }
+  }
+
+  &--primary-03 {
+    color: $white;
+    background: $primary-03;
+
+    &:hover {
+      @include gradientBg($Gradient-01);
+    }
+  }
+
+  &--white {
+    color: $primary-01;
+    background: $white;
+    box-shadow: 0px 14px 40px rgba(203, 181, 212, 0.4);
+
+    &:hover {
+      box-shadow: 0px 14px 40px rgba(203, 181, 212, 0.7);
+    }
+  }
+
+  // sizes
+
+  &--sm {
+    font-size: $font-size-sm;
+    padding: rem(13px) rem(18px);
+  }
+
+  // types
+
+  &--link {
+    padding: 0;
+    background: transparent;
+
+    &:hover {
+      background: transparent;
+    }
+
+    &.c-btn {
+      &--white {
+        color: $white;
+
+        svg {
+          fill: $white;
+        }
+
+        &:hover {
+          color: $primary-03;
+
+          svg {
+            fill: $primary-03;
+          }
+        }
+      }
+
+      &--primary-01 {
+        color: $primary-01;
+
+        svg {
+          fill: $primary-01;
+        }
+
+        &:hover {
+          color: $white;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+
+      &--primary-02 {
+        color: $primary-02;
+
+        svg {
+          fill: $primary-02;
+        }
+
+        &:hover {
+          color: $white;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+
+      &--primary-03 {
+        color: $primary-03;
+
+        svg {
+          fill: $primary-03;
+        }
+
+        &:hover {
+          color: $white;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &--no-shadow {
+    &, &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
