@@ -3,6 +3,15 @@
     "defaultLocale": "en",
     "pages": {
       "*": ["common"],
-      "/": ["home"]
+      "/": ["home"],
+      "/gateway": ["gateway"],
+      "/banking": ["banking"],
+      "/automatization": ["automatization"],
+      "/technology": ["technology"],
+      "/software": ["software"],
+      "/verification": ["verification"],
+      "/about": ["about"],
+      "/contact": ["contact"],
+      "/faq": ["faq"]
     }
   }

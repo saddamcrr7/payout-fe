@@ -7,7 +7,7 @@ export default function Home() {
   const { t } = useTranslation('home')
 
   return (
-    <div className="o-home">
+    <div className="p-home">
        <Head>
         <title>{t('head.title')}</title>
         <link rel="icon" href="/favicon.ico" />
